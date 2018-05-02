@@ -31,8 +31,11 @@ namespace MyCompass
 
         void Stop()
         {
-            if (Compass.IsMonitoring)
-                Compass.Stop();
+            if (!Compass.IsMonitoring)
+                return;
+
+            Compass.ReadingChanged -= Compass_ReadingChanged;
+            Compass.Stop();            
         }
 
 
@@ -40,6 +43,9 @@ namespace MyCompass
 
         void Start()
         {
+            if (Compass.IsMonitoring)
+                return;
+
             Compass.ReadingChanged += Compass_ReadingChanged;
             Compass.Start(SensorSpeed.Ui);
         }

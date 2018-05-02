@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyCompass"
+             x:Class="MyCompass.MainPage">
+    <ContentPage.BindingContext>
+        <local:MyCompassViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               
+               Source="compass.png"/>
+
+        <Image HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Rotation="{Binding Heading}"
+               Source="arrow.png"
+               x:Name="ImageArrow"/>
+
+        <Label Grid.Row="1" 
+            Text="{Binding HeadingDisplay}" 
+           x:Name="LabelInfo"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+    </Grid>
+</ContentPage>

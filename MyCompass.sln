@@ -7,9 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompass.Android", "MyComp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompass.iOS", "MyCompass\MyCompass.iOS\MyCompass.iOS.csproj", "{6A244A35-4E90-486A-BF7C-07E5F3943547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompass", "MyCompass\MyCompass\MyCompass.csproj", "{C937D133-5D0A-438A-84ED-F945BE057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompass", "MyCompass\MyCompass\MyCompass.csproj", "{C937D133-5D0A-438A-84ED-F945BE057C1D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompass.UWP", "MyCompass\MyCompass.UWP\MyCompass.UWP.csproj", "{48F0FA10-E4D4-4482-84B2-B3325F73C712}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C4D199D1-A2DF-4C1F-99C5-C6E26602DCBA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

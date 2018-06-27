@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyCompass"
-             x:Class="MyCompass.MainPage">
+             x:Class="MyCompass.MainPage"
+             BackgroundColor="LightGray" Padding="10">
     <ContentPage.BindingContext>
         <local:MyCompassViewModel/>
     </ContentPage.BindingContext>
@@ -21,6 +22,7 @@
                VerticalOptions="Center"
                Rotation="{Binding Heading}"
                Source="arrow.png"
+               Margin="75"
                x:Name="ImageArrow"/>
 
         <Label Grid.Row="1" 

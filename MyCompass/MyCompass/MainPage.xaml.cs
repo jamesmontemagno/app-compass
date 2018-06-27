@@ -19,13 +19,15 @@ namespace MyCompass
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            ((MyCompassViewModel)BindingContext).StartCommand.Execute(null);
+            if(!DesignMode.IsDesignModeEnabled)
+                ((MyCompassViewModel)BindingContext).StartCommand.Execute(null);
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            ((MyCompassViewModel)BindingContext).StopCommand.Execute(null);
+            if (!DesignMode.IsDesignModeEnabled)
+                ((MyCompassViewModel)BindingContext).StopCommand.Execute(null);
         }
 
     }

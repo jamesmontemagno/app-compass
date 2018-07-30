@@ -35,7 +35,7 @@ namespace MyCompass
                 return;
 
             Compass.ReadingChanged -= Compass_ReadingChanged;
-            Compass.Stop();            
+            Compass.Stop();
         }
 
 
@@ -47,13 +47,14 @@ namespace MyCompass
                 return;
 
             Compass.ReadingChanged += Compass_ReadingChanged;
-            Compass.Start(SensorSpeed.Ui);
+            Compass.Start(SensorSpeed.UI);
+
         }
 
-        void Compass_ReadingChanged(CompassChangedEventArgs e)
+        void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
-            HeadingDisplay = $"Heading: {e.Reading.HeadingMagneticNorth}";
             Heading = e.Reading.HeadingMagneticNorth;
+            HeadingDisplay = $"Heading: {Heading.ToString()}";
         }
     }
 }

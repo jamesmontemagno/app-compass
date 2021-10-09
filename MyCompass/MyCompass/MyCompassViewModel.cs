@@ -46,9 +46,9 @@ namespace MyCompass
             if (Compass.IsMonitoring)
                 return;
 
-            Compass.ApplyLowPassFilter = true;
+            
             Compass.ReadingChanged += Compass_ReadingChanged;
-            Compass.Start(SensorSpeed.UI);
+            Compass.Start(SensorSpeed.UI, true);
 
         }
 
